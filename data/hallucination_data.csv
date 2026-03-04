@@ -1,0 +1,5 @@
+response,ground_truth,label
+"RAG combines retrieval and generation","RAG combines retrieval and generation",0
+"RAG is a piece of cloth","RAG combines retrieval and generation",1
+"BM25 is a ranking algorithm","BM25 is a ranking algorithm",0
+"BM25 is a neural network","BM25 is a ranking algorithm",1

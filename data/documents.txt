@@ -1,0 +1,5 @@
+Retrieval-Augmented Generation (RAG) combines retrieval systems with large language models.
+Vector embeddings convert text into numerical representations.
+BM25 is a ranking function used in information retrieval.
+Cross-encoders score query-document pairs jointly.
+...

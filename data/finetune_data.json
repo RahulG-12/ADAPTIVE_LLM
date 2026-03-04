@@ -1,0 +1,10 @@
+[
+  {
+    "instruction": "What is Retrieval-Augmented Generation?",
+    "response": "Retrieval-Augmented Generation combines document retrieval with language models to improve factual accuracy."
+  },
+  {
+    "instruction": "What is BM25?",
+    "response": "BM25 is a ranking function used in information retrieval to score documents based on query relevance."
+  }
+]
