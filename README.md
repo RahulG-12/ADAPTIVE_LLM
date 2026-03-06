@@ -1,75 +1,85 @@
-# Adaptive AI Intelligence Platform
+Adaptive AI Intelligence Platform
 
-An advanced AI system that combines **Retrieval-Augmented Generation (RAG)**, **Hybrid Retrieval**, and **Hallucination Detection** to improve the reliability and accuracy of Large Language Model (LLM) responses.
+An advanced AI system for reliable Large Language Model (LLM) responses using Retrieval-Augmented Generation (RAG), Hybrid Retrieval, and Hallucination Detection.
 
-This platform demonstrates how modern AI systems integrate **information retrieval, generative models, and validation mechanisms** to build more trustworthy AI applications.
+This project demonstrates how modern AI applications combine information retrieval, generative models, and validation systems to create more trustworthy and production-ready AI pipelines.
 
----
+Overview
 
-## Project Overview
+Large Language Models often generate hallucinated or unsupported answers when they rely only on internal model knowledge.
 
-Large Language Models often generate responses that are **incorrect or hallucinated** when they lack external knowledge.
+This platform improves reliability by introducing a retrieval and validation pipeline before delivering responses.
 
-This system solves that problem by:
+The system workflow:
 
-1. Retrieving relevant documents from a knowledge base.
-2. Injecting context into the LLM.
-3. Generating grounded responses.
-4. Detecting potential hallucinations.
-5. Monitoring system behavior through a dashboard.
+Retrieve relevant knowledge from a document base
 
----
+Inject contextual information into the LLM prompt
 
-## Key Features
+Generate grounded responses
 
-### Hybrid Retrieval System
-Combines two retrieval approaches:
+Detect hallucinations using a classifier
 
-- **Dense Retrieval** using vector embeddings
-- **Sparse Retrieval** using BM25 ranking
+Monitor system behavior through a dashboard
 
-These results are combined to improve search accuracy.
+This architecture simulates real-world AI production systems used in modern LLM applications.
 
----
+Key Features
+Hybrid Retrieval System
 
-### RAG (Retrieval-Augmented Generation)
+The platform combines two retrieval approaches:
 
-Instead of answering from model memory, the system:
+Dense Retrieval
 
-1. Searches knowledge base
-2. Retrieves relevant documents
-3. Injects context into prompt
-4. Generates grounded response
+Uses vector embeddings
 
-This significantly improves reliability.
+Semantic search using embedding similarity
 
----
+Sparse Retrieval
 
-### Hallucination Detection
+Uses BM25 ranking
 
-A classifier analyzes generated responses and predicts whether the response may be hallucinated or unsupported by retrieved context.
+Keyword-based relevance scoring
 
-This helps identify unreliable answers.
+Both methods are combined to produce more accurate document retrieval results.
 
----
+Retrieval-Augmented Generation (RAG)
 
-### AI Monitoring Dashboard
+Instead of relying solely on model memory, the system uses a retrieval-first architecture:
 
-A Streamlit dashboard provides insights into:
+Search knowledge base
 
-- Retrieved documents
-- Retrieval scores
-- Response output
-- Hallucination detection status
-- System latency
+Retrieve relevant documents
 
-This simulates **AI observability tools used in production systems**.
+Inject context into prompt
 
----
+Generate grounded response
 
-## System Architecture
+This significantly improves response accuracy and factual grounding.
 
-```
+Hallucination Detection
+
+A machine learning classifier evaluates generated responses and predicts whether the response may be hallucinated or unsupported by retrieved context.
+
+This module helps identify unreliable answers before presenting them to users.
+
+AI Monitoring Dashboard
+
+A Streamlit monitoring dashboard provides observability into the system:
+
+Retrieved documents
+
+Retrieval similarity scores
+
+Generated response output
+
+Hallucination detection status
+
+System latency metrics
+
+This simulates AI observability tools used in production LLM systems.
+
+System Architecture
 User Query
      │
      ▼
@@ -87,40 +97,37 @@ Hallucination Detection
      │
      ▼
 Monitoring Dashboard
-```
+Tech Stack
+Programming
 
----
-
-## Tech Stack
-
-### Programming
 Python
 
-### Machine Learning
-Transformers  
-Sentence Transformers  
+Machine Learning
+
+Transformers
+Sentence Transformers
 Scikit-learn
 
-### Retrieval
-FAISS  
+Retrieval
+
+FAISS
 BM25
 
-### Backend
+Backend
+
 FastAPI
 
-### Dashboard
-Streamlit  
+Dashboard
+
+Streamlit
 Plotly
 
-### Data Processing
-Pandas  
+Data Processing
+
+Pandas
 NumPy
 
----
-
-## Project Structure
-
-```
+Project Structure
 adaptive_llm_platform
 │
 ├── retrieval
@@ -142,98 +149,74 @@ adaptive_llm_platform
 ├── integrated_system.py
 ├── app_dashboard.py
 └── requirements.txt
-```
-
----
-
-## Installation
+Installation
 
 Clone the repository
 
-```
 git clone https://github.com/RahulG-12/ADAPTIVE_LLM.git
 cd ADAPTIVE_LLM
-```
 
 Create virtual environment
 
-```
 python -m venv venv
-```
 
-Activate environment
+Activate environment (Windows)
 
-Windows
-```
 venv\Scripts\activate
-```
 
 Install dependencies
 
-```
 pip install -r requirements.txt
-```
-
----
-
-## Run the System
+Running the System
 
 Start the Streamlit dashboard
 
-```
 streamlit run app_dashboard.py
-```
 
-The dashboard will open at:
+Dashboard will open at:
 
-```
 http://localhost:8501
-```
-
----
-
-## Example Query
-
-```
+Example Query
 What is Retrieval-Augmented Generation?
-```
 
 The system will:
 
-1. Retrieve relevant documents
-2. Generate LLM response
-3. Detect hallucination probability
-4. Display retrieval scores
+Retrieve relevant documents
 
----
+Generate an LLM response
 
-## Future Improvements
+Detect hallucination probability
 
-- Vector database integration
-- Multi-document reasoning
-- Reinforcement learning feedback
-- Production deployment pipeline
-- Distributed retrieval system
+Display retrieval scores and metrics
 
----
+Demo
 
-🎥 Demo
- The project is demonstrated via recorded execution.
+A recorded demonstration of the system:
 
-🔗 Demo Link: https://drive.google.com/file/d/1QTF95gs5q0tHJd4YTu10LPUkpINsVIoQ/view?usp=sharing
+Demo Video
+https://drive.google.com/file/d/1QTF95gs5q0tHJd4YTu10LPUkpINsVIoQ/view
 
+Future Improvements
 
+Vector database integration
 
-## Author
+Multi-document reasoning
 
-Rahul Giri  
-AI / ML Engineer  
+Reinforcement learning feedback
+
+Production deployment pipeline
+
+Distributed retrieval architecture
+
+Author
+
+Rahul Giri
+AI / ML Engineer
 Mumbai, India
 
-GitHub: https://github.com/RahulG-12
+GitHub
+https://github.com/RahulG-12
 
----
+License
 
-## License
-
-This project is for educational and research purposes.
+This project is intended for educational and research purposes.
